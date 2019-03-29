@@ -1,0 +1,51 @@
+Jenkins & Jfrog:
+
+JFROG Setup:
+------------
+Run the below commands to download the image and run the container:
+
+	docker pull docker.bintray.io/jfrog/artifactory-oss:latest
+
+	docker run --name artifactory -d -p 8081:8081 docker.bintray.io/jfrog/artifactory-oss:latest
+
+	Access jfrog using http://Locahost:8081/artifactory/webapp/#/home
+
+	create a password.. default user name is admin.
+
+	Now to go Admin --> virtual --> New
+
+	give any keyname, and select the existing local-repo and include it.
+
+
+Jenkins Setup:
+---------------
+
+Go to Manage Jenkins --> Configure System
+
+Find Artifactory section
+
+serverid: Artifactory
+URL: above url of jfrog
+give username/pwd
+
+TEST CONNECTION.
+
+
+NOW -- go to package job
+
+select Generic-Artifactory Integration
+(by default it selects the url)
+
+upload spec resource : Job Configuration
+enter below values
+
+{
+    "files": [
+        {
+            "pattern": "*.war",
+            "target": "key created in jfrog"
+         }
+    ]
+}
+
+Go back to jfrog and verify the war.
