@@ -10,7 +10,15 @@ Things to know before working with ansible
 	
 			password based
 			key based
+
+Ansible controller ( is the machine/host/server where we install ansible ) 
+
+	/etc/ansible default directory ( we have two important file in it )
 	
+		hosts ( default inventory file in which we can mention remote servers we want to apply/push the changes to)
+		
+		ansible.cfg  ( default ansible configuraton - can be used to customize as per our need )
+
 
 Ansible Terminlogy 
 
@@ -26,11 +34,3 @@ Ansible Terminlogy
 	
 		look at: https://docs.ansible.com/ansible/latest/reference_appendices/glossary.html     for more terms used in ansible. 
 		
-
-Ansible controller ( is the machine/host/server where we install ansible ) 
-
-	/etc/ansible default directory ( we have two important file in it )
-	
-		hosts ( default inventory file in which we can mention remote servers we want to apply/push the changes to)
-		
-		ansible.cfg  ( default ansible configuraton - can be used to customize as per our need )
