@@ -1,0 +1,23 @@
+how to create a service in docker swarm
+
+example1: 
+
+	docker service create --name mysvc --replicas 4 -p 9080:8080 tomcat
+	docker service ls
+	docker service mysvc ps
+	docker service inspect mysvc
+	docker service rm mysvc 
+
+example2: 
+
+	docker service create --name mysvc1 --replicas 4 -p 80:80 nginx
+        docker service ls
+        docker service mysvc ps
+        docker service inspect mysvc
+        docker service rm mysvc
+
+===========================================================================================
+
+create services in swarm using compose file ( declarative model )
+
+
