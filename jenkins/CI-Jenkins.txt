@@ -15,4 +15,3 @@ build lifecycle  : maven goal           : post build action
 					sonar.language=java
 					sonar.java.source=1.8
 					
-CD ( continuous Delivery/Deployment )
