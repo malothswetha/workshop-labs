@@ -22,8 +22,8 @@ sudo systemctl start jenkins
 
 #Install Maven  ( on Jenkins machine )
 
-cd /tmp ; wget http://mirrors.estointernet.in/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz
-cd /tmp ; tar -xzf apache-maven-3.6.0-bin.tar.gz -C /opt
+cd /tmp ; wget http://mirrors.estointernet.in/apache/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
+cd /tmp ; tar -xzf apache-maven-3.6.1-bin.tar.gz -C /opt
 
 #Install SonarQube-runner ( on Jenkins machine )
 
