@@ -11,6 +11,7 @@ Install SonarQube ( container or download zip )
 		useradd devops -m -d /home/devops -s /bin/bash -g devops
 		passwd devops ( enter passwd )
 		cd /opt ; chown -R devops:devops sonarqube-6.7.6 ; chmod -R 755 sonarqube-6.7.6
+		su - devops
 		cd /opt/sonarqube-6.7.6/bin/linux-x86-64/ ; ./sonar.sh start
 	
 		after starting successfully goto browser & hit below
